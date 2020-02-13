@@ -1,0 +1,64 @@
+.retail-theme {
+  .bg-primary,
+  .bg-btn-selected {
+    background-color: #413f42;
+    color: white;
+  }
+
+  .bg-primary-hover {
+    background-color: #70b62c;
+  }
+
+  .bg-secondary {
+    background-color: #70b62c;
+  }
+
+  .bg-secondary-soft,
+  .bg-selected,
+  .bg-editible-input {
+    background-color: #acd195;
+  }
+
+  .bg-menu-item {
+    background-color: #676667;
+  }
+
+  .bg-form,
+  .bg-card-title,
+  .bg-sub-menu-item {
+    background-color: #838383;
+  }
+
+  .bg-btn-unselected {
+    background-color: #f5f5f5;
+    color: #413f42;
+  }
+
+  .bg-btn-border {
+    border-color: #413f42;
+  }
+
+  .bg-thead {
+    background-color: #838383;
+  }
+
+  .bg-thead-soft {
+    background-color: #f2f2f2;
+  }
+
+  .font-color-menu {
+    color: white;
+  }
+
+  .font-color-menu-hover {
+    color: #70b62c;
+  }
+
+  .font-color-label {
+    color: #413f42;
+  }
+
+  .font-color-text {
+    color: #4a4a4a;
+  }
+}

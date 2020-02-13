@@ -1,0 +1,41 @@
+@import "./../../styles/scss/main";
+
+.menu-sidebar {
+  // padding-top: $sidebarMiniWidth;
+  width: 47px;
+  overflow: hidden; // oculta scroll do menu
+  ul {
+    margin-top: 5px;
+    display: none;
+    li {
+      @include flexbox();
+      @include flex-direction();
+    }
+    .side-dash-icon {
+      color: #9f9f9f;
+      // padding: 5px 9px;
+    }
+    .menu-label {
+      color: #9f9f9f;
+      display: none;
+    }
+  }
+
+  @include transition(left ease-in-out $timeTransitionMenu, width ease-in-out $timeTransitionMenu);
+
+  &.open {
+    width: $sidebarWidth;
+    .side-dash-icon {
+      color: #9f9f9f;
+      margin: 5px;
+    }
+  }
+
+  &.close {
+    width: 47px;
+
+    &.mobile {
+      left: -$sidebarWidth;
+    }
+  }
+}

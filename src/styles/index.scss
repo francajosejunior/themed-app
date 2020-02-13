@@ -1,0 +1,159 @@
+@import "./scss/main.scss";
+@import "./lib/bootstrap-grid.scss";
+@import "./lib/reset.scss";
+@import "./lib/material-icon.scss";
+@import "./scss/mixins";
+@import "./themes/themes";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html,
+body,
+#root,
+.app-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+::-webkit-scrollbar {
+  appearance: none;
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 10px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.ReactSelectRow__control {
+  @include flex-direction();
+  min-height: 35px !important;
+  height: 35px !important;
+  * {
+    @include flex-direction();
+  }
+  ::-webkit-scrollbar {
+    appearance: none;
+    width: 1px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+  }
+  .ReactSelectRow__value-container {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    &.ReactSelectRow__value-container--is-multi {
+      width: 100%;
+      &.ReactSelectRow__value-container--has-value {
+        height: 27px;
+      }
+    }
+  }
+  .ReactSelectRow__placeholder {
+    @include opacity(0.6);
+  }
+  // .ReactSelectRow__single-value {
+  //   margin-top: 5px !important;
+  // }
+}
+
+.pending {
+  .ReactSelectRow__control {
+    @include flex-direction();
+
+    * {
+      @include flex-direction();
+    }
+    @extend %pre-loader;
+    .ReactSelectRow__placeholder {
+      opacity: 0.6;
+    }
+  }
+}
+
+.component-pending {
+  @extend %pre-loader;
+}
+
+// DATE PICKER
+.react-datepicker-wrapper {
+  @extend %width-100;
+  .react-datepicker__input-container {
+    @extend %width-100;
+  }
+}
+.react-datepicker__input-container {
+  .react-datepicker__close-icon {
+    &:hover {
+      &::after {
+        color: rgb(153, 153, 153);
+      }
+    }
+    &::after {
+      background-color: rgba(0, 0, 0, 0);
+      border-radius: 0px;
+      bottom: 0;
+      box-sizing: border-box;
+      content: "\D7";
+      cursor: pointer;
+      font-size: 26px;
+      height: 16px;
+      width: 16px;
+      line-height: 1;
+      margin: -8px auto 0;
+      padding: 2px;
+      position: absolute;
+      text-align: center;
+      color: rgb(204, 204, 204);
+      right: 0px;
+      top: 2px;
+    }
+  }
+}
+
+input.number,
+input[type="number"] {
+  text-align: right !important;
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}

@@ -1,0 +1,64 @@
+.premium-theme {
+  .bg-primary,
+  .bg-btn-selected {
+    background-color: #2b537c;
+    color: white;
+  }
+
+  .bg-primary-hover:hover {
+    background-color: #14395e;
+  }
+
+  .bg-secondary {
+    background-color: #fcca69;
+  }
+
+  .bg-secondary-soft,
+  .bg-selected,
+  .bg-editible-input {
+    background-color: #fff4d9;
+  }
+
+  .bg-menu-item {
+    background-color: #46749f;
+  }
+
+  .bg-form,
+  .bg-card-title,
+  .bg-sub-menu-item {
+    background-color: #6996c1;
+  }
+
+  .bg-btn-unselected {
+    background-color: #f5f5f5;
+    color: #015381;
+  }
+
+  .bg-btn-border {
+    border-color: #026096;
+  }
+
+  .bg-thead {
+    background-color: #d2dee8;
+  }
+
+  .bg-thead-soft {
+    background-color: #f2f2f2;
+  }
+
+  .font-color-menu {
+    color: white;
+  }
+
+  .font-color-menu-hover:hover {
+    color: #eda417;
+  }
+
+  .font-color-label {
+    color: #015381;
+  }
+
+  .font-color-text {
+    color: #4a4a4a;
+  }
+}

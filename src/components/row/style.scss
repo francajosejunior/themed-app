@@ -1,0 +1,10 @@
+@import './../../styles/scss/flexbox';
+
+.row {
+  @include flex-direction();
+  width: 100%;
+  margin: 0;
+  &.oposite-sides {
+    @include justify-content(space-between);
+  }
+}

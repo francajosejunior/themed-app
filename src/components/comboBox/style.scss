@@ -1,0 +1,7 @@
+@import './../../styles/scss/flexbox';
+
+.combo-box {
+  &.label-line {
+    @include flex-direction();
+  }
+}

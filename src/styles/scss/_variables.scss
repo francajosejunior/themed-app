@@ -1,0 +1,53 @@
+//magin
+$marginDefault: 8px;
+$n-marginDefault: -8px;
+
+//SIDE BAR
+$sidebarWidth: 256px;
+$sidebarMiniWidth: 46px;
+$heigthMenuItem: 42px;
+$fontSizeMenu: 12.5px;
+$timeTransitionMenu: 0.2s;
+//SIDE BAR
+
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1500px
+) !default;
+//max
+$breakpointsMax: (
+  "sm": 575px,
+  "md": 767px,
+  "lg": 991px,
+  "xl": 1199px
+) !default;
+
+// criacao [ VARIAVEIS ]
+// [ VARIAVEIS > TAMANHO ]
+$browser-context: 16; // utilizada nas funcoes ( em, rem )
+$gutter: 15px;
+$columns: 12;
+
+// [ VARIAVIES > ANIMACAO ]
+$timing: 0.15s;
+
+$ease: ease;
+$ease-out: cubic-bezier(0.91, 0.12, 0.86, 0.29);
+$fast-in: cubic-bezier(0, 0.96, 0, 0.89);
+
+// cria o array de fonts separados por espaco
+// ex: font_name font_name font_name
+$create-fonts: true;
+$fonts: "gotham", "gotham-light-regular", "gotham-bold";
+
+// create [ WEBFONTS ]
+$gotham: "gotham";
+$gotham-light: "gotham-light-regular";
+$gotham-bold: "gotham-bold";
+
+$roboto: "Roboto", sans-serif;
+
+$col-form-size: 5.912px;

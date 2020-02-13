@@ -1,0 +1,125 @@
+@import "./../../styles/scss/main";
+
+.login-app {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto";
+  background-image: url("../../images/login/background-login.png");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  img {
+    max-width: 100%;
+  }
+  // @media (max-width: 600px) {
+  //   background-image: url('../../images/login/background-login-mobile.png');
+  // }
+
+  .body-track {
+    @include justify-content(space-between);
+    @include opacity(0.8);
+    width: 23%;
+    height: 100vh;
+    margin-left: 16%;
+    background-color: #424242;
+    height: 100%;
+    padding: 5px 3% 5px 3%;
+    bottom: 0;
+    top: 0;
+    @media (max-width: 980px) and (min-width: 600px) {
+      width: 35%;
+      margin-left: 10%;
+      background-color: #424242;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-left: 0;
+      padding: 5px 70px 5px 70px;
+      background-color: #424242;
+    }
+
+    .login-track {
+      width: 100%;
+      @include align-items(center);
+      .login-logo {
+        background-image: url("../../images/login/logo-login.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 350px;
+        width: 200px;
+        margin-top: 15px;
+        @media (max-width: 1600px) {
+          background-image: url("../../images/login/logo-login-medium.png");
+          height: 235px;
+        }
+        @media (max-width: 980px) {
+          background-image: url("../../images/login/logo-login-medium.png");
+          height: 100px;
+        }
+      }
+      .login-welcome {
+        width: 100%;
+        color: rgb(180, 180, 180);
+        font-size: 26px;
+        @media (max-width: 600px) {
+          margin-top: 5px;
+        }
+        #text-warning {
+          color: white;
+          font-size: 11px;
+          margin-top: 10px;
+          height: 25px;
+          padding: 7px;
+          border-left: 3px solid #2196f3;
+          @media (max-width: 1380px) {
+            font-size: 9px;
+          }
+          @media (max-width: 728px) {
+            font-size: 9px;
+          }
+        }
+      }
+      .login-form {
+        width: 100%;
+        margin-top: 20px;
+        @media (max-width: 1380px) {
+          font-size: 9px;
+        }
+        @media (max-width: 728px) {
+          font-size: 9px;
+        }
+      }
+    }
+    .footer {
+      width: 100%;
+
+      @include opacity(0.8);
+      .support-contact {
+        @include flex-direction(row);
+        @include justify-content(center);
+        span {
+          width: 90px;
+          font-size: 11px;
+          cursor: pointer;
+          text-decoration: underline;
+          @include opacity(0.4);
+          &:hover {
+            @include opacity(0.9);
+          }
+        }
+      }
+      .partner-footer {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        height: 1;
+        @include opacity(0.4);
+        hr {
+          width: 100%;
+        }
+        @media (max-width: 1380px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

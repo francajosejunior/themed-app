@@ -1,0 +1,167 @@
+@import "./variables";
+@import "./flexbox";
+//END CONACI EXTENDS
+%align-center {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+%align-right {
+  margin: {
+    left: auto;
+    right: 0;
+  }
+}
+%align-left {
+  margin: {
+    left: 0;
+    right: auto;
+  }
+}
+
+%rounded-button {
+  border-radius: 50px;
+}
+// TEXT ALIGN
+%text-center {
+  text-align: center;
+}
+%text-left {
+  text-align: left;
+}
+%text-right {
+  text-align: right;
+}
+%box-sizing {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+%display-block {
+  display: block;
+}
+%width-100 {
+  width: 100%;
+}
+%pointer {
+  cursor: pointer;
+}
+
+%select-none {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+%col-form {
+  margin-top: $col-form-size;
+  padding-right: $col-form-size;
+  padding-left: $col-form-size;
+}
+
+%tamanho_fake_check_radio {
+  width: 15px;
+  height: 15px;
+}
+
+%pre-loader {
+  position: relative;
+  @include flex-direction();
+  &::before {
+    content: " ";
+    height: 2px;
+    position: absolute;
+
+    bottom: -1px;
+    left: 0%;
+
+    animation-name: pre-loader;
+    -webkit-animation-name: pre-loader;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+}
+
+@-moz-keyframes pre-loader {
+  0% {
+    width: 0%;
+    left: 0%;
+  }
+  25% {
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  75% {
+  }
+  90% {
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes pre-loader {
+  0% {
+    width: 0%;
+    left: 0%;
+  }
+  25% {
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  75% {
+  }
+  90% {
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes pre-loader {
+  0% {
+    width: 0%;
+    left: 0%;
+  }
+  25% {
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  75% {
+  }
+  90% {
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+%flex-direction-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}

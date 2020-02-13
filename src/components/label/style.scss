@@ -1,0 +1,19 @@
+@import "./../../styles/scss/variables";
+
+@mixin label_style($font-site: 0.9rem, $display: block, $margin: 5px 0) {
+  font-size: $font-site;
+  color: $colorBaseTwo;
+  margin: $margin;
+  text-transform: capitalize;
+  @if $display {
+    display: $display;
+  }
+}
+
+.label {
+  @include label_style(12px);
+}
+
+.inline-label {
+  @include label_style(0.9rem, "block", 6px 10px 5px 0px);
+}

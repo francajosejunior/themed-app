@@ -1,0 +1,76 @@
+@import "../../styles/scss/main";
+
+.header-component {
+  @extend %select-none;
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-height: 100px;
+    width: 100%;
+    z-index: 100;
+    display: block;
+    @extend %box-sizing;
+    height: 46px;
+    background-color: #ffffff;
+    @include box-shadow(0px -5px 15px 0 #000000);
+    nav {
+      float: right;
+      max-height: 46px;
+      min-height: 46px;
+      ul {
+        @include flex-direction();
+        @include align-items(center);
+        @include justify-content(center);
+        height: 46px;
+        max-height: 46px;
+        min-height: 46px;
+
+        li {
+          margin: 0;
+          padding: 0;
+          max-height: 46px;
+
+          cursor: pointer;
+
+          .nav-user-name {
+            @include flex-direction();
+            @include align-items(center);
+            @include justify-content(center);
+            text-transform: uppercase;
+            font-size: 0.85em;
+          }
+
+          img {
+            width: 25px;
+            height: 25px;
+            margin-left: $marginDefault;
+            margin-right: $marginDefault;
+          }
+          .nav-user-icon {
+            width: 27px;
+            height: 27px;
+          }
+        }
+      }
+    }
+
+    .btn-menu {
+      position: absolute;
+      top: 15px;
+      left: 13px;
+      z-index: 101;
+      cursor: pointer;
+      img {
+        height: 15px;
+        width: 19px;
+      }
+    }
+
+    .image-logo {
+      position: relative;
+      cursor: pointer;
+    }
+  }
+}
