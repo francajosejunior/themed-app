@@ -1,0 +1,17 @@
+@import "../../styles/scss/main";
+
+.user-level {
+  @include flex-row();
+  @include justify-content(space-between);
+  padding: 6px 15px;
+  border-radius: 20px;
+  .click {
+    cursor: pointer;
+  }
+  .user-level-text {
+    @include flex-row();
+  }
+  .user-level-stars {
+    @include flex-row();
+  }
+}

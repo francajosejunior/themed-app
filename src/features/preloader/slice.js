@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   fetching: false
 };
 
 const preloaderSlice = createSlice({
-  name: "preloader",
+  name: 'preloader',
   initialState: initialState,
   reducers: {
     setFetching: (state, action) => {

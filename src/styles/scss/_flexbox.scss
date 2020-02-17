@@ -267,7 +267,7 @@
 
   // Box-Flex only supports a flex-grow value so let's grab the
   // first item in the list and just return that.
-  @if type-of($fg) == 'list' {
+  @if type-of($fg) == "list" {
     $fg-boxflex: nth($fg, 1);
   }
 
@@ -408,4 +408,9 @@
   @extend %flexbox;
   @include justify-content($horizontal);
   @include align-items($vertical);
+}
+
+@mixin flex-row() {
+  @include flexbox();
+  @include flex-direction(row);
 }

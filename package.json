@@ -5,10 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env REACT_APP_ENV=stage webpack-dev-server --open",
-    "stage": "cross-env REACT_APP_ENV=stage webpack",
-    "stage2": "cross-env REACT_APP_ENV=stage2 webpack",
-    "build": "cross-env REACT_APP_ENV=production webpack"
+    "start": "webpack-dev-server --env.REACT_APP_DEBUG=true --env.REACT_APP_THEME=premium-theme --env.REACT_APP_ENV=stage",
+    "stage": "webpack --env.REACT_APP_THEME=premium-theme --env.REACT_APP_ENV=stage",
+    "stage2": "webpack --env.REACT_APP_THEME=premium-theme --env.REACT_APP_ENV=stage2",
+    "build": "webpack --env.REACT_APP_THEME=premium-theme --env.REACT_APP_ENV=production --open"
   },
   "keywords": [],
   "author": "José Joaquim Júnior",
@@ -56,7 +56,6 @@
     "@reduxjs/toolkit": "^1.2.3",
     "axios": "^0.19.2",
     "create-react-class": "^15.6.3",
-    "cross-env": "^7.0.0",
     "file-saver": "^2.0.1",
     "history": "^4.7.2",
     "imask": "^5.1.1",

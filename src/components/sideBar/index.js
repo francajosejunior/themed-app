@@ -1,11 +1,10 @@
-import React from 'react'
-import { menu } from '../../services/menuServices'
-import './styles.scss'
-import Icon from '../icon'
+import React from 'react';
+import { menu } from '../../services/menuServices';
+import './styles.scss';
 
-const dashBoardWhite = require('../../images/dashboard_white.png')
+const dashBoardWhite = require('../../images/dashboard_white.png');
 
-function SideBar(params) {
+function SideBar() {
   return (
     <section className="menu-sidebar bg-primary">
       {menu.map(m => (
@@ -23,7 +22,7 @@ function SideBar(params) {
         </ul>
       ))}
     </section>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;

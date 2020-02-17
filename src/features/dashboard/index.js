@@ -1,12 +1,10 @@
 import React from 'react';
+import UserLevel from '../userLevel';
 
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <h2>Dashboard</h2>
-      {[...Array(100).keys()].map((x, i) => (
-        <p key={i}>Dashboard</p>
-      ))}
+      <UserLevel />
     </div>
   );
 };

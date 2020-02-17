@@ -1,16 +1,13 @@
-import React from 'react'
-import Routes from './Routes'
-
-let theme = 'premium-theme'
-
-//theme = 'retail-theme'
+import React from 'react';
+import Routes from './Routes';
+import { getTheme } from './services/environmentServices';
 
 function App() {
   return (
-    <div className={`app-container ${theme}`}>
+    <div className={`app-container ${getTheme()}`}>
       <Routes />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
