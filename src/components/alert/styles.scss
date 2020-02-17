@@ -1,0 +1,8 @@
+@import "../../styles/scss/main";
+
+.alert {
+  width: 100%;
+  border-style: solid;
+  border-width: 0.5px;
+  @include flex-dir(row);
+}
