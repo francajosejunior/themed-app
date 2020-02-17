@@ -1,2 +1,21 @@
+@import "../../styles/scss/main";
+
 .dashboard {
+  .productivity-simulator-wrapper {
+    width: 100%;
+
+    .productivity {
+      @include flex(1);
+    }
+    .simulator {
+      @include fixed-w(480px);
+    }
+
+    @include media("xl") {
+      @include flex-direction(row);
+      //   .simulator {
+      //     @include fixed-w(480px);
+      //   }
+    }
+  }
 }

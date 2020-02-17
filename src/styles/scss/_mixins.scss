@@ -1,4 +1,4 @@
-@import './extends.scss';
+@import "./extends.scss";
 
 //link ocupando todo o espaço do container
 @mixin linkFullSpace {
@@ -16,7 +16,7 @@
 }
 
 // ::before e o ::after você sempre precisa desses três, então economize duas linhas
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
   display: $display;
   position: $pos;
@@ -24,7 +24,7 @@
 
 //manter a proporção.
 @mixin responsive-ratio($x, $y, $pseudo: false) {
-  $padding: unquote(($y / $x) * 100 + '%');
+  $padding: unquote(($y / $x) * 100 + "%");
   @if $pseudo {
     &:before {
       @include pseudo($pos: relative);
@@ -63,16 +63,8 @@
 }
 //gradiente para o Slide
 @mixin blackGradient {
-  background: -moz-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.74) 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.74) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.74) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.74) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -82,11 +74,7 @@
 }
 @mixin gradiente {
   background: rgb(140, 179, 207); /* Old browsers */
-  background: -moz-linear-gradient(
-    left,
-    rgba(140, 179, 207, 1) 0%,
-    rgba(89, 123, 148, 1) 100%
-  ); /* FF3.6-15 */
+  background: -moz-linear-gradient(left, rgba(140, 179, 207, 1) 0%, rgba(89, 123, 148, 1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     left,
     rgba(140, 179, 207, 1) 0%,
@@ -121,12 +109,7 @@
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80222324', endColorstr='#e6222324',GradientType=0 ); /* IE6-9 */
 }
-@mixin buton-rounded-color(
-  $rgba: rgba(0, 0, 0, 0.2),
-  $pad: 12px 18px,
-  $color: #fff,
-  $hover: rgba(0, 0, 0, 0.5)
-) {
+@mixin buton-rounded-color($rgba: rgba(0, 0, 0, 0.2), $pad: 12px 18px, $color: #fff, $hover: rgba(0, 0, 0, 0.5)) {
   @extend %rounded-button;
   background-color: $rgba;
   padding: $pad;
@@ -151,13 +134,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-@mixin css-triangle(
-  $color,
-  $direction,
-  $size: 6px,
-  $position: absolute,
-  $round: false
-) {
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
   @include pseudo($pos: $position);
   width: 0;
   height: 0;
@@ -292,8 +269,7 @@
 @mixin opacity($value) {
   $IEValue: $value * 100;
   opacity: $value;
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + $IEValue +
-    ')';
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $IEValue + ")";
   filter: alpha(opacity=$IEValue);
 }
 
@@ -326,19 +302,19 @@
 }
 
 @mixin placeholder {
-  @include optional-at-root('::-webkit-input-placeholder') {
+  @include optional-at-root("::-webkit-input-placeholder") {
     @content;
   }
 
-  @include optional-at-root(':-moz-placeholder') {
+  @include optional-at-root(":-moz-placeholder") {
     @content;
   }
 
-  @include optional-at-root('::-moz-placeholder') {
+  @include optional-at-root("::-moz-placeholder") {
     @content;
   }
 
-  @include optional-at-root(':-ms-input-placeholder') {
+  @include optional-at-root(":-ms-input-placeholder") {
     @content;
   }
 }
@@ -353,11 +329,7 @@
     color-stop(0%, $top),
     color-stop(100%, $bottom)
   ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    $top 0%,
-    $bottom 100%
-  ); /* Chrome10+,Safari5.1+ */
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, $top 0%, $bottom 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, $top 0%, $bottom 100%); /* IE10+ */
   background: linear-gradient(to bottom, $top 0%, $bottom 100%); /* W3C */
@@ -373,20 +345,20 @@
 }
 
 // center position
-@mixin _position($p: center, $string: '') {
-  $a: '';
-  $b: '';
-  $c: '';
+@mixin _position($p: center, $string: "") {
+  $a: "";
+  $b: "";
+  $c: "";
 
-  @if $string != '' {
-    $a: explode($string, '-');
+  @if $string != "" {
+    $a: explode($string, "-");
     $b: nth($a, 1);
     $c: nth($a, 2);
   }
 
   position: absolute;
 
-  @if $p == center and $string == '' {
+  @if $p == center and $string == "" {
     top: 0;
     left: 0;
     right: 0;
@@ -446,18 +418,18 @@
   $pos_newsyntax: ();
 
   @if not is-valid-keyword-direction($pos) {
-    $pos: 'top';
+    $pos: "top";
   }
 
   // New Syntax
-  @if $pos == 'top' {
-    $pos_newsyntax: 'to bottom';
-  } @else if $pos == 'right' {
-    $pos_newsyntax: 'to left';
-  } @else if $pos == 'bottom' {
-    $pos_newsyntax: 'to top';
-  } @else if $pos == 'left' {
-    $pos_newsyntax: 'to right';
+  @if $pos == "top" {
+    $pos_newsyntax: "to bottom";
+  } @else if $pos == "right" {
+    $pos_newsyntax: "to left";
+  } @else if $pos == "bottom" {
+    $pos_newsyntax: "to top";
+  } @else if $pos == "left" {
+    $pos_newsyntax: "to right";
   }
 
   @each $g in $args {
@@ -472,13 +444,13 @@
 
 @mixin animation($animate...) {
   $max: length($animate);
-  $animations: '';
+  $animations: "";
 
   @for $i from 1 through $max {
     $animations: #{$animations + nth($animate, $i)};
 
     @if $i < $max {
-      $animations: #{$animations + ', '};
+      $animations: #{$animations + ", "};
     }
   }
   -webkit-animation: $animations;
@@ -551,11 +523,11 @@
     fill: $color !important;
   }
 }
-@mixin select_style($icon: 'arrow-down.png') {
+@mixin select_style($icon: "arrow-down.png") {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url('#{$images_location}/layout/#{$icon}');
+  background-image: url("#{$images_location}/layout/#{$icon}");
   background-position: 95% center;
   background-repeat: no-repeat;
   option:not(:checked) {
@@ -567,4 +539,16 @@
   $fullWidth: $w + 5.912 + 5.912;
   width: #{$fullWidth}px;
   @extend %col-form;
+}
+
+@mixin fixed-w($width) {
+  width: $width;
+  min-width: $width;
+  max-width: $width;
+}
+
+@mixin fixed-h($height) {
+  height: $height;
+  min-height: $height;
+  max-height: $height;
 }
