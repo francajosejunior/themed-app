@@ -60,6 +60,9 @@
 
   .font-color-label {
     color: #413f42;
+    * {
+      color: #413f42 !important;
+    }
   }
 
   .font-color-text {
