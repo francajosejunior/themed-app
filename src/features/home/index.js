@@ -1,6 +1,6 @@
-import React from "react";
-import "./styles.scss";
+import React from 'react';
+import './styles.scss';
 
-export default function Home(params) {
+export default function Home() {
   return <div className="home-page"></div>;
 }

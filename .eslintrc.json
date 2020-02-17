@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "airbnb-base-hf"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "plugins": ["import", "react", "react-hooks", "prettier"],
   "env": {
     "es6": true,
@@ -27,7 +23,7 @@
     "import/prefer-default-export": 0,
     "import/no-named-as-default": 0,
     "react/display-name": 0,
-    "semi": [2, "never"],
+    "semi": [0, "never"],
     "jsx-quotes": ["error", "prefer-double"],
     "linebreak-style": ["error", "windows"],
     "react-hooks/rules-of-hooks": "error",
