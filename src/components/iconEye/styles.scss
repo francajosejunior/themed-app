@@ -1,0 +1,17 @@
+@import "../../styles/scss/main";
+
+.icon-eye {
+  position: relative;
+  @include user-select(none);
+  .icon-eye-eye-locked {
+    content: " ";
+    border: none;
+    width: 2px;
+    height: 25px;
+    position: absolute;
+    transform: rotate(-45deg);
+    border-radius: 1px;
+    top: -3%;
+    left: 46%;
+  }
+}

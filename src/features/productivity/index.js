@@ -1,18 +1,12 @@
 import React from 'react';
-import MaterialIcon from 'material-icons-react';
 import './styles.scss';
 import Alert from '../../components/alert';
+import IconEye from '../../components/iconEye';
 
 const Productivity = () => {
   return (
     <div className="font-color-label">
-      <Alert
-        icon={
-          <MaterialIcon icon="remove_red_eye" size="small" inactive={true} />
-        }
-      >
-        Produtividade
-      </Alert>
+      <Alert icon={<IconEye locked />}>Produtividade</Alert>
     </div>
   );
 };

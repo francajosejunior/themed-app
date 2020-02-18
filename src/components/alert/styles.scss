@@ -4,6 +4,25 @@
   width: 100%;
   border-style: solid;
   border-width: 0.5px;
-  padding: 8px;
+  padding: 8px 8px 8px 12px;
+
   @include flex-dir(row);
+  @include justify-content(space-between);
+  position: relative;
+
+  .alert-bar {
+    height: 100%;
+    width: 8px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .alert-label {
+  }
+
+  .alert-icon {
+    cursor: pointer;
+    @include user-select(none);
+  }
 }
