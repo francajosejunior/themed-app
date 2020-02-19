@@ -5,6 +5,7 @@ import listReducer from '../../components/comboBox/listReducer';
 import loginReducer from '../../features/login/loginSlice';
 import preloaderReducer from '../../features/preloader/slice';
 import userLevelReducer from '../../features/userLevel/slice';
+import productivityReducer from '../../features/productivity/slice';
 import { createNamedWrapperReducer } from '../reduxHelper';
 
 const authPersistConfig = {
@@ -13,11 +14,18 @@ const authPersistConfig = {
   blacklist: ['somethingTemporary']
 };
 
+const productivityPersistConfig = {
+  key: 'productivity',
+  storage: storage,
+  blacklist: ['somethingTemporary']
+};
+
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, loginReducer),
   preloader: preloaderReducer,
   operation: createNamedWrapperReducer(listReducer, 'operation'),
-  userLevel: userLevelReducer
+  userLevel: userLevelReducer,
+  productivity: persistReducer(productivityPersistConfig, productivityReducer)
 });
 
 export default rootReducer;

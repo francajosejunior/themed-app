@@ -1,12 +1,12 @@
 import React from 'react';
+import ProductivityTop from './productivityTop';
 import './styles.scss';
-import Alert from '../../components/alert';
-import IconEye from '../../components/iconEye';
 
 const Productivity = () => {
   return (
-    <div className="font-color-label">
-      <Alert icon={<IconEye locked />}>Produtividade</Alert>
+    <div className="productivity-wrapper font-color-label">
+      <ProductivityTop />
+      <br />
     </div>
   );
 };
