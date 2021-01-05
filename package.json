@@ -54,7 +54,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "@reduxjs/toolkit": "^1.2.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "create-react-class": "^15.6.3",
     "file-saver": "^2.0.1",
     "history": "^4.7.2",
